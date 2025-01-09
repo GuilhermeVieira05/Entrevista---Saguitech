@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saguitech</title>
+    <script type="module" src="../utils/index.js"></script>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <main>
+        <nav class="nav">
+            <h1>Nota fiscal</h1>
+        </nav>
+        <section class="forms">
+            <form >
+                <div class="value__input">
+                    <label for="saleValue">Valor da Venda</label>
+                    <input 
+                    type="text" 
+                    name="saleValue" 
+                    id="saleValue"
+                    value="R$ 0,00"
+                    placeholder="Digite o valor da venda"
+                    required
+                    >
+                </div>
+                <div class="itens__input">
+                    <label for="saleItens">Itens vendidos: </label>
+                    <input 
+                    type="text" 
+                    name="saleItens" 
+                    id="saleItens"
+                    placeholder="Digite os itens separados por vírgula"
+                    required
+                    >
+                    
+                </div>
+                <div class="irpf__input tax">
+                    <label for="irpf">IRPF (%): </label>
+                    <input 
+                    type="number" 
+                    name="irpf" 
+                    id="irpf"
+                    value=0
+                    placeholder="Ex.: 10"
+                    required
+                    max="100"
+                    min="0"
+                    >
+                </div>
+                <div class="pis__input tax">
+                    <label for="pis">PIS (%): </label>
+                    <input 
+                    type="number" 
+                    name="pis" 
+                    id="pis"
+                    value=0
+                    placeholder="Ex.: 10"
+                    required
+                    max="100"
+                    min="0"
+                    >
+                </div>
+                <div class="cofins__input tax">
+                    <label for="cofins">COFINS (%): </label>
+                    <input 
+                    type="number" 
+                    name="cofins" 
+                    id="cofins"
+                    value=0
+                    placeholder="Ex.: 10"
+                    required
+                    max="100"
+                    min="0"
+                    >
+                </div>
+                <div class="inss__input tax">
+                    <label for="inss">INSS (%): </label>
+                    <input 
+                    type="number" 
+                    name="inss" 
+                    id="inss"
+                    value=0
+                    placeholder="Ex.: 10"
+                    required
+                    max="100"
+                    min="0"
+                    >
+                </div>
+                <div class="issqn__input tax">
+                    <label for="issqn">ISSQN (%): </label>
+                    <input 
+                    type="number" 
+                    name="issqn" 
+                    id="issqn"
+                    value=0
+                    placeholder="Ex.: 10"
+                    required
+                    max="100"
+                    min="0"
+                    >
+                </div>
+
+                <button 
+                type="button" 
+                id="notaFiscalBtn"
+                >
+                Gerar Nota Fiscal
+            </button>
+
+            </form>
+        </section>
+
+        <section class="notaFiscal">
+            <div id="resultado" class="result" style="display: none;">
+                <h2>Nota Fiscal</h2>
+                <div id="nota-fiscal"></div>
+              </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
